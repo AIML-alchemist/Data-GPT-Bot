@@ -57,19 +57,13 @@ def load_llm(TEMP):
     # )
 
     openai.api_type = "azure"
-    openai.api_base = "https://cs-lab-azureopenai.openai.azure.com/"
+    openai.api_base = ""
     openai.api_version = "2022-12-01"
-    openai.api_key = os.getenv("dfb58f8ff710406aab6350cdc9e7e38f")
-    os.environ['OPENAI_API_KEY'] = "dfb58f8ff710406aab6350cdc9e7e38f"
-    # oai.api_type = "azure"
-    # oai.api_base = "https://cs-lab-azureopenai.openai.azure.com/"
-    # oai.api_version = "2022-12-01"
-    # oai.api_key = os.getenv("dfb58f8ff710406aab6350cdc9e7e38f")
+    openai.api_key = os.getenv("")
+    os.environ['OPENAI_API_KEY'] = ""
 
-    engine="inc-lab-AzureOpenAI-text-davinci-003"
-    llm = OpenAI(openai_api_key = "dfb58f8ff710406aab6350cdc9e7e38f",engine=engine, temperature=TEMP)
-    # llmpai = oai(openai_api_key = "dfb58f8ff710406aab6350cdc9e7e38f",model=engine, temperature=TEMP)
-    # llm = OpenAIChat(openai_api_key="api_key", temperature=0)
+    engine=""
+    llm = OpenAI(openai_api_key = "",engine=engine, temperature=TEMP)
 
     return llm
 
