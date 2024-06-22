@@ -37,13 +37,13 @@ def load_llm(TEMP):
     # )
 
     openai.api_type = "azure"
-    openai.api_base = "https://cs-lab-azureopenai.openai.azure.com/"
+    openai.api_base = ""
     openai.api_version = "2022-12-01"
-    openai.api_key = os.getenv("dfb58f8ff710406aab6350cdc9e7e38f")
-    os.environ['OPENAI_API_KEY'] = "dfb58f8ff710406aab6350cdc9e7e38f"
+    openai.api_key = os.getenv("")
+    os.environ['OPENAI_API_KEY'] = ""
 
-    engine="inc-lab-AzureOpenAI-text-davinci-003"
-    llm = OpenAI(openai_api_key = "dfb58f8ff710406aab6350cdc9e7e38f",engine=engine, temperature=TEMP)
+    engine=""
+    llm = OpenAI(openai_api_key = "",engine=engine, temperature=TEMP)
 
     # llm = OpenAIChat(openai_api_key="api_key", temperature=0)
 
@@ -52,7 +52,7 @@ def load_llm(TEMP):
 
 def main():
     st.set_page_config(page_title="Structured Data LLM Analyser")
-    st.subheader("Incedo Structured Data Analyser")
+    st.subheader("Structured Data Analyser")
     st.write("Upload a Spreadsheet ex: CSV or XLSX")
 
     with st.sidebar:
@@ -131,7 +131,7 @@ def main():
     memory=memory
     )
 
-    agent = create_pandas_dataframe_agent(llm, data, verbose=True, openai_api_key = "dfb58f8ff710406aab6350cdc9e7e38f")
+    agent = create_pandas_dataframe_agent(llm, data, verbose=True, openai_api_key = "")
     
     
     
