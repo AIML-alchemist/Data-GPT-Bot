@@ -7,9 +7,8 @@ def run_request(question_to_ask):
     openai.api_type = "azure"
     openai.api_base = ""
     openai.api_version = "2022-12-01"
-    # openai.api_key = os.getenv("dfb58f8ff710406aab6350cdc9e7e38f")
-    # os.environ['OPENAI_API_KEY'] = "dfb58f8ff710406aab6350cdc9e7e38f"
-
+    # openai.api_key = os.getenv("")
+    # os.environ['OPENAI_API_KEY'] = ""
     engine=""
     openai.api_key = ""
     response = openai.Completion.create(
